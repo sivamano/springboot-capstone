@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SB Capstone</title>
+    <style>
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+            background: #f4f6f8;
+            color: #1f2933;
+        }
+        .card {
+            background: #ffffff;
+            padding: 40px 48px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            text-align: center;
+            max-width: 420px;
+        }
+        h1 {
+            margin: 0 0 8px;
+            font-size: 1.8rem;
+        }
+        .status {
+            display: inline-block;
+            margin: 12px 0 20px;
+            padding: 4px 12px;
+            border-radius: 999px;
+            background: #e3f9e5;
+            color: #1f7a33;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+        p {
+            margin: 0 0 24px;
+            line-height: 1.5;
+        }
+        a.button {
+            display: inline-block;
+            padding: 10px 20px;
+            border-radius: 8px;
+            background: #6db33f;
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        a.button:hover {
+            background: #5a9a32;
+        }
+    </style>
+</head>
+<body>
+<div class="card">
+    <h1>SB Capstone</h1>
+    <span class="status">● Application is running</span>
+    <p>Spring Boot is up on port 8080 and serving this page from
+        <code>src/main/resources/static</code>.</p>
+    <a class="button" href="/hello">Call /hello endpoint</a>
+</div>
+</body>
+</html>
