@@ -1,11 +1,9 @@
 package org.capstone.sb_capstone.services;
 
+import org.capstone.sb_capstone.models.Product;
+
 public interface ProductService {
 
-    void createProduct(String title,
-                       String description,
-                       double price,
-                       String imageUrl,
-                       String categoryName);
+    Product createProduct(Product product);
 
 }
