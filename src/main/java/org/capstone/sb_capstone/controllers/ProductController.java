@@ -3,6 +3,7 @@ package org.capstone.sb_capstone.controllers;
 import org.capstone.sb_capstone.dtos.CreateProductRequestDto;
 import org.capstone.sb_capstone.dtos.CreateProductResponseDto;
 import org.capstone.sb_capstone.dtos.GetProductResponseDto;
+import org.capstone.sb_capstone.dtos.UpdateProductRequestDto;
 import org.capstone.sb_capstone.models.Product;
 import org.capstone.sb_capstone.services.ProductService;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -14,7 +15,6 @@ import java.util.List;
 @RestController
 @RequestMapping("/products")
 public class ProductController {
-
     private final ProductService productService;
 
     public ProductController(@Qualifier("fakeStoreProductService") ProductService productService) {
@@ -30,10 +30,10 @@ public class ProductController {
 
     @GetMapping("")
     public List<GetProductResponseDto> getAllProducts() {
-        List<Product> products =  productService.getAllProducts();
+        List<Product> products = productService.getAllProducts();
 
         List<GetProductResponseDto> responseDtos = new ArrayList<>();
-        for(Product product: products){
+        for (Product product : products) {
             responseDtos.add(GetProductResponseDto.fromProduct(product));
         }
         return responseDtos;
@@ -46,19 +46,22 @@ public class ProductController {
     }
 
     @PatchMapping("/{id}")
-    public void updateProduct() {
+    public CreateProductResponseDto updateProduct(@PathVariable("id") Long id,
+                              @RequestBody UpdateProductRequestDto updateProductRequestDto) {
+    Product product = productService.updateProduct(id, updateProductRequestDto.toProduct());
+    return CreateProductResponseDto.fromProduct(product);
 
     }
 
     @DeleteMapping("/{id}")
-    public void deleteProduct() {
-
+    public void deleteProduct(@PathVariable("id") Long id) {
+        productService.deleteSingleProduct(id);
     }
 
     @PutMapping("/{id}")
-    public CreateProductResponseDto replaceProduct(  @PathVariable("id") Long id,
-                               @RequestBody CreateProductRequestDto createProductRequestDto) {
-        Product product = productService.replaceProduct(id,createProductRequestDto.toProduct());
+    public CreateProductResponseDto replaceProduct(@PathVariable("id") Long id,
+                                                   @RequestBody CreateProductRequestDto createProductRequestDto) {
+        Product product = productService.replaceProduct(id, createProductRequestDto.toProduct());
         return CreateProductResponseDto.fromProduct(product);
 
     }

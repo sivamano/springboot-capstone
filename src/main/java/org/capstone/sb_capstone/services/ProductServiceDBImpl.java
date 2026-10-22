@@ -27,4 +27,18 @@ public class ProductServiceDBImpl implements ProductService{
     public Product replaceProduct(Long id, Product product) {
         return null;
     }
+
+    @Override
+    public void deleteSingleProduct(Long id) {
+    }
+
+    /**
+     * @param id
+     * @param product
+     * @return
+     */
+    @Override
+    public Product updateProduct(Long id, Product product) {
+        return null;
+    }
 }

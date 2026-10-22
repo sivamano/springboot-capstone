@@ -7,10 +7,9 @@ import org.capstone.sb_capstone.models.Product;
 @Getter
 @Setter
 public class CreateProductRequestDto {
-    private Long id;
     private String title;
     private String description;
-    private double price;
+    private Double price;
     private String imageUrl;
     private String categoryName;
 

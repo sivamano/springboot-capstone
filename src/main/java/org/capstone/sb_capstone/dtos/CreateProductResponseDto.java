@@ -10,7 +10,7 @@ public class CreateProductResponseDto {
     private Long id;
     private String Title;
     private String description;
-    private double price;
+    private Double price;
     private String imageUrl;
     private String categoryName;
 

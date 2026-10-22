@@ -1,0 +1,23 @@
+info:
+  name: update_a_product
+  type: http
+  seq: 6
+
+http:
+  method: PATCH
+  url: http://localhost:8080/products/20
+  body:
+    type: json
+    data: |-
+      {
+        "categoryName": "furrier/furrables",
+        "imageUrl": "http://petpaw.com"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false
