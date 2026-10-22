@@ -7,6 +7,7 @@ import org.capstone.sb_capstone.models.Product;
 @Getter
 @Setter
 public class CreateProductRequestDto {
+    private Long id;
     private String title;
     private String description;
     private double price;

@@ -1,0 +1,26 @@
+info:
+  name: replace_a_product
+  type: http
+  seq: 4
+
+http:
+  method: PUT
+  url: http://localhost:8080/products/20
+  body:
+    type: json
+    data: |-
+      {
+        "title": "petsCutepaw",
+        "price": 7200,
+        "description": "paw of pet",
+        "categoryName": "doggies/huggables",
+        "imageUrl": "http://petpaw.com"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

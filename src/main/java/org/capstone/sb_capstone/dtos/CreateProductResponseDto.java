@@ -8,7 +8,7 @@ import org.capstone.sb_capstone.models.Product;
 @Setter
 public class CreateProductResponseDto {
     private Long id;
-    private String title;
+    private String Title;
     private String description;
     private double price;
     private String imageUrl;

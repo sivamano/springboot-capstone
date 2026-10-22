@@ -1,0 +1,26 @@
+info:
+  name: create_a_product
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: http://localhost:8080/products
+  body:
+    type: json
+    data: |-
+      {
+        "title": "petspaw",
+        "price": 7200,
+        "description": "paw of pet",
+        "categoryName": "doggies/huggables",
+        "imageUrl": "http://petpaw.com"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false
