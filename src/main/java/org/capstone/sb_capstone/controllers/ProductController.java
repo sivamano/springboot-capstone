@@ -1,9 +1,9 @@
 package org.capstone.sb_capstone.controllers;
 
-import org.capstone.sb_capstone.dtos.CreateProductRequestDto;
-import org.capstone.sb_capstone.dtos.CreateProductResponseDto;
-import org.capstone.sb_capstone.dtos.GetProductResponseDto;
-import org.capstone.sb_capstone.dtos.UpdateProductRequestDto;
+import org.capstone.sb_capstone.dtos.product.CreateProductRequestDto;
+import org.capstone.sb_capstone.dtos.product.CreateProductResponseDto;
+import org.capstone.sb_capstone.dtos.product.GetProductResponseDto;
+import org.capstone.sb_capstone.dtos.product.UpdateProductRequestDto;
 import org.capstone.sb_capstone.models.Product;
 import org.capstone.sb_capstone.services.ProductService;
 import org.springframework.beans.factory.annotation.Qualifier;

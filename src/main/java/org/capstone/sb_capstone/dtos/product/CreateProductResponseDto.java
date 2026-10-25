@@ -1,4 +1,4 @@
-package org.capstone.sb_capstone.dtos;
+package org.capstone.sb_capstone.dtos.product;
 
 import lombok.Getter;
 import lombok.Setter;

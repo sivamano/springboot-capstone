@@ -1,4 +1,4 @@
-package org.capstone.sb_capstone.dtos;
+package org.capstone.sb_capstone.dtos.product;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -6,8 +6,7 @@ import org.capstone.sb_capstone.models.Product;
 
 @Getter
 @Setter
-public class UpdateProductRequestDto {
-    private Long id;
+public class CreateProductRequestDto {
     private String title;
     private String description;
     private Double price;

@@ -1,7 +1,7 @@
 package org.capstone.sb_capstone.services;
 
-import org.capstone.sb_capstone.dtos.FakeStoreProductRequestDto;
-import org.capstone.sb_capstone.dtos.FakeStoreProductResponseDto;
+import org.capstone.sb_capstone.dtos.fakestore.FakeStoreProductRequestDto;
+import org.capstone.sb_capstone.dtos.fakestore.FakeStoreProductResponseDto;
 import org.capstone.sb_capstone.models.Product;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpMethod;
