@@ -2,6 +2,7 @@ package org.capstone.sb_capstone.dtos.product;
 
 import lombok.Getter;
 import lombok.Setter;
+import org.capstone.sb_capstone.models.Category;
 import org.capstone.sb_capstone.models.Product;
 
 @Getter
@@ -19,7 +20,9 @@ public class CreateProductRequestDto {
         product.setDescription(this.description);
         product.setPrice(this.price);
         product.setImageUrl(this.imageUrl);
-        product.setCategoryName(this.categoryName);
+        Category category = new Category();
+        category.setName(this.categoryName);
+        product.setCategory(category);
 
         return  product;
     }
