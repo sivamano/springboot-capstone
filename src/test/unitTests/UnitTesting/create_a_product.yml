@@ -10,7 +10,7 @@ http:
     type: json
     data: |-
       {
-        "title": "petsCutepaw",
+        "title": "petsCutepaws",
         "price": 7200,
         "description": "paw of pet",
         "categoryName": "doggies/huggables",

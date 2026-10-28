@@ -1,5 +1,6 @@
 package org.capstone.sb_capstone.models;
 
+import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 import jakarta.persistence.MappedSuperclass;
 import lombok.Getter;
@@ -12,6 +13,7 @@ import java.time.LocalDateTime;
 @MappedSuperclass
 public class Base {
     @Id
+    @GeneratedValue
     private Long id;
     private LocalDateTime createdAt;
     private LocalDateTime lastUpdated;
